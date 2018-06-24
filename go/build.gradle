@@ -1,0 +1,19 @@
+plugins {
+    id 'com.github.blindpirate.gogradle' version '0.8.1'
+}
+
+golang {
+    packagePath = 'github.com/akhileshmaurya/21DaysOfCode'
+ }
+
+dependencies {
+    golang {
+        build(['name':'github.com/go-sql-driver/mysql'])
+    }
+}
+
+build {
+   //targetPlatform = ['linux-386', 'windows-amd64', 'darwin-amd64']
+    targetPlatform = ['darwin-amd64']
+    go 'build -o ./21DaysOfCode${GOOS}_${GOARCH}${GOEXE}'
+}
