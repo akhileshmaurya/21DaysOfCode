@@ -5,12 +5,17 @@ import (
 	"crypto/sha256"
 	"strconv"
 	"time"
+	"log"
 )
 
-// Block keeps block headers
-type Block struct {
+
+type CryptoBlock struct {
 	Timestamp     int64
 	Data          []byte
 	PrevBlockHash []byte
 	Hash          []byte
+}
+
+func main(){
+	log.Println("In Main Function");
 }
