@@ -1,0 +1,6 @@
+package com.learntocode.sorting;
+
+public enum SortingType {
+  SELECTION, INSERTION, REC_INSERTION, BUBBLE, REC_BUBBLE, MERGE, ITR_MERGE, QUICK, ITR_QUICK, HEAP, COUNTING, RADIX, BUCKET, SHELL
+
+}
