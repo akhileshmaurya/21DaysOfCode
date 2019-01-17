@@ -11,11 +11,17 @@ public class SortingProvider {
       case BUBBLE:
         sortAlgo = new BubbleSort();
         break;
+      case REC_BUBBLE:
+        sortAlgo = new BubbleSortRecursive();
+        break;
       case INSERTION:
         sortAlgo = new InsertionSort();
         break;
-      case REC_BUBBLE:
-        sortAlgo = new BubbleSortRecursive();
+      case REC_INSERTION:
+        sortAlgo = new InsertionSortRecursive();
+        break;
+      case MERGE:
+        sortAlgo = new MergeSort();
         break;
       default:
         break;
