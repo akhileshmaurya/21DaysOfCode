@@ -1,13 +1,12 @@
 package com.learntocode.sorting;
 
 import java.util.Arrays;
-import java.util.concurrent.ThreadLocalRandom;
+import com.learntocode.utils.CommonUtils;
 
 public class SortingMain {
-  private static final int N = 200;
 
   public static void main(String[] args) {
-    int[] arr = generateRandomArray(20);
+    int[] arr = CommonUtils.generateRandomArray(20);
     for (SortingType type : getImplementedSortingAlgo()) {
       int[] arrIns = Arrays.copyOf(arr, arr.length);
       System.out.println(Arrays.toString(arrIns));
@@ -24,13 +23,4 @@ public class SortingMain {
         SortingType.REC_BUBBLE, SortingType.REC_INSERTION};
     return arr;
   }
-
-  public static int[] generateRandomArray(int size) {
-    int[] arr = new int[size];
-    for (int i = 0; i < size; i++) {
-      arr[i] = ThreadLocalRandom.current().nextInt(1, N);
-    }
-    return arr;
-  }
-
 }
