@@ -1,7 +1,10 @@
 package com.learntocode.leetcode;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ThreadLocalRandom;
@@ -16,15 +19,17 @@ public class PairSum {
     CommonUtils.printArray(array);
     int k = array[ThreadLocalRandom.current().nextInt(0, array.length - 1)]
         + array[ThreadLocalRandom.current().nextInt(0, array.length - 1)];
-    System.out.println(" K :" + k);
-
-    printPairSum(array, k);
+    System.out.println("K :" + k);
+    List<List<Integer>> res = printPairSum(array, k);
+    for (List<Integer> pair : res) {
+      System.out.println(pair);
+    }
   }
 
-  private static void printPairSum(int[] array, int k) {
+  private static List<List<Integer>> printPairSum(int[] array, int k) {
 
     Map<Integer, Set<Integer>> map = new HashMap<>();
-
+    List<List<Integer>> res = new ArrayList<>();
     for (int i = 0; i < array.length; i++) {
       if (!map.containsKey(array[i])) {
         Set<Integer> set = new HashSet<>();
@@ -34,9 +39,10 @@ public class PairSum {
     }
     for (int i = 0; i < array.length; i++) {
       if (map.containsKey((k - array[i]))) {
-        System.out.println("(" + array[i] + " , " + (k - array[i]) + ")");
+        res.add(Arrays.asList(array[i], (k - array[i])));
       }
     }
+    return res;
   }
 
 }
