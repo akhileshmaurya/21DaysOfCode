@@ -2,7 +2,7 @@ package com.learntocode.projectEuler;
 
 import java.util.Scanner;
 
-// https://www.hackerrank.com/contests/projecteuler/challenges/euler003
+// https://www.hackerrank.com/contests/projecteuler/challenges/euler00
 public class Euler003LargestPrimeFactor {
 
 
