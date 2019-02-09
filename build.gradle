@@ -20,6 +20,7 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
+    testCompile 'junit:junit:4.12'
     compile("com.google.code.gson:gson:2.2.4")
     compile('args4j:args4j:2.33')
     compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.11.0'
